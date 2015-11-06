@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    tools:context=".MainActivity" tools:deviceIds="wear_square">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan"
+            android:id="@+id/button"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="initiateNewScan" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:text="Connect"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:onClick="connectAllLeDevice" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensors"
+            android:id="@+id/button3"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:onClick="createSensors" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:id="@+id/button4"
+            android:layout_gravity="center_horizontal"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="disconnectAllLeDevice" />
+    </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Output"
+        android:id="@+id/textView" />
+
+</LinearLayout>
